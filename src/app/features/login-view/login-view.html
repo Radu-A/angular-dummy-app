@@ -1,1 +1,26 @@
-<p>login-view works!</p>
+<section class="login-section">
+  <p-card class="login-card" [style]="{ width: '25rem', overflow: 'hidden' }">
+    <ng-template #title> Welcome Again </ng-template>
+    <ng-template #subtitle> Introduce user name and password to get into Dummy App</ng-template>
+
+    <form class="login-form" [formGroup]="loginForm" (ngSubmit)="login()">
+      <p-floatlabel variant="on">
+        <input pInputText id="username" autocomplete="off" formControlName="username" />
+        <label for="username">User name</label>
+      </p-floatlabel>
+
+      <p-floatlabel variant="on">
+        <input pInputText id="password" autocomplete="off" formControlName="password" />
+        <label for="password">Password</label>
+      </p-floatlabel>
+    </form>
+
+    <button class="login-button" type="submit">Login</button>
+
+    <ng-template #footer>
+      <div class="flex gap-4 mt-1">
+        <p-button type="submit" label="Login" class="w-full" styleClass="w-full" />
+      </div>
+    </ng-template>
+  </p-card>
+</section>
