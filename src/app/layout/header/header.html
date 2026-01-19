@@ -1,16 +1,22 @@
-<mat-toolbar>
-  <!-- <button matIconButton class="example-icon" aria-label="Example icon-button with menu icon">
+<header>
+  <mat-toolbar>
+    <!-- <button matIconButton class="example-icon" aria-label="Example icon-button with menu icon">
     <mat-icon>menu</mat-icon>
   </button> -->
-  <a [routerLink]="['/']"><h3>Dummy App</h3></a>
-  <span class="example-spacer"></span>
-  <a [routerLink]="['/']"><span>Products</span></a>
-  <span class="example-spacer"></span>
-  <button matIconButton [matMenuTriggerFor]="menu">
-    <mat-icon>person</mat-icon>
-  </button>
-  <mat-menu #menu="matMenu">
-    <span class="username">Username</span>
-    <button mat-menu-item>Logout</button>
-  </mat-menu>
-</mat-toolbar>
+    <a [routerLink]="['/']"><h3 class="nav-logo">Dummy App</h3></a>
+
+    <span class="example-spacer"></span>
+
+    <a [routerLink]="['/']"><span class="nav-link">Products</span></a>
+
+    <span class="example-spacer"></span>
+
+    <button matIconButton [matMenuTriggerFor]="menu">
+      <mat-icon>person</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <span class="username">Username</span>
+      <button mat-menu-item>Logout</button>
+    </mat-menu>
+  </mat-toolbar>
+</header>
